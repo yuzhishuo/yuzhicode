@@ -1,6 +1,5 @@
 mod mc;
 
-
 mod sound {
     pub mod instrument {
         pub fn clarinet() {
