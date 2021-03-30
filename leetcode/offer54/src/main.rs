@@ -6,6 +6,12 @@ pub struct TreeNode {
     pub right: Option<Rc<RefCell<TreeNode>>>,
 }
 
+pub struct TreeNode1 {
+    pub val: i32,
+    pub left: Option<Box<TreeNode>>,
+    pub right: Option<Box<TreeNode>>,
+}
+
 impl TreeNode {
     #[inline]
     pub fn new(val: i32) -> Self {
@@ -46,15 +52,18 @@ impl Solution {
     }
 }
 
-
 impl Solution {
     pub fn kth_largest(root: Option<Rc<RefCell<TreeNode>>>, k: i32) -> i32 {
         // Passed 0ms 2.8mb
         fn mfs(node: Option<Rc<RefCell<TreeNode>>>, values: &mut Vec<i32>) {
             let node = node.as_ref().unwrap().borrow();
-            if node.right.is_some() { mfs(node.right.clone(), values); }
+            if node.right.is_some() {
+                mfs(node.right.clone(), values);
+            }
             values.push(node.val);
-            if node.left.is_some() { mfs(node.left.clone(), values); }
+            if node.left.is_some() {
+                mfs(node.left.clone(), values);
+            }
         }
 
         let mut values = vec![];
