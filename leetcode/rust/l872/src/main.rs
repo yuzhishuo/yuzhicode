@@ -36,7 +36,7 @@ impl Solution {
                 }
             }
             point = v.pop();
-            if let Some(p) = point {   
+            if let Some(p) = point {
                 point = p.borrow_mut().right.take();
             }
         }

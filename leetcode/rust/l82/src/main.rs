@@ -16,7 +16,7 @@ impl ListNode {
 struct Solution;
 impl Solution {
     pub fn delete_duplicates(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
-        let mut list =  ListNode { val: 0, next: head };
+        let mut list = ListNode { val: 0, next: head };
 
         let mut cur = &mut list;
 

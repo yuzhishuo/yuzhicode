@@ -8,8 +8,8 @@ impl Solution {
 
         let mut len = 1;
 
-        let mut dp = Vec::with_capacity(nums.len()+1);
-        dp.resize(nums.len()+1, 0);
+        let mut dp = Vec::with_capacity(nums.len() + 1);
+        dp.resize(nums.len() + 1, 0);
 
         dp[len] = nums[0];
 
@@ -38,5 +38,5 @@ impl Solution {
 }
 
 fn main() {
-    Solution::length_of_lis(vec![10,9,2,5,3,7,101,18]);
+    Solution::length_of_lis(vec![10, 9, 2, 5, 3, 7, 101, 18]);
 }
