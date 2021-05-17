@@ -28,12 +28,11 @@ impl Solution {
     }
 }
 
-
 impl Solution {
     //! 构造一个新的链表
     pub fn reverse_print1(head: Option<Box<ListNode>>) -> Vec<i32> {
         if head.is_none() {
-            return vec![]
+            return vec![];
         }
         let mut r = Some(Box::new(ListNode {
             val: head.as_ref().unwrap().val,
@@ -60,7 +59,6 @@ impl Solution {
     }
 }
 
-
 impl Solution {
     pub fn reverse_print2(head: Option<Box<ListNode>>) -> Vec<i32> {
         let mut result = Vec::new();
@@ -75,8 +73,6 @@ impl Solution {
         result
     }
 }
-
-
 
 fn main() {
     println!("Hello, world!");

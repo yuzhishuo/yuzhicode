@@ -48,13 +48,9 @@ impl Solution {
         let mut s = "".to_string();
         let mut digits = digits;
 
-
         while !digits.is_empty() {
-
             s.push(digits.pop().unwrap());
         }
-
-
 
         let mut new_vec = Vec::<String>::new();
         let mut digits = s;

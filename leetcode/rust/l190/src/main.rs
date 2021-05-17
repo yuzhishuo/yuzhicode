@@ -7,9 +7,9 @@ impl Solution {
         //进制的本质
         let mut i: u32 = 32;
         loop {
-            match  i {
+            match i {
                 0 => break,
-                _defual  => i-= 1,
+                _defual => i -= 1,
             }
             ans <<= 1;
             ans += x & 1;
