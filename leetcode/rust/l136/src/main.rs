@@ -11,5 +11,5 @@ impl Solution {
 }
 
 fn main() {
-    assert_eq!(Solution::single_number(vec![1,2,2]), 1);
+    assert_eq!(Solution::single_number(vec![1, 2, 2]), 1);
 }
