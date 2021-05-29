@@ -31,3 +31,4 @@ impl Solution {
 fn main() {
     assert_eq!(Solution::my_sqrt(9), 3);
     assert_eq!(Solution::my_sqrt1(10), 3);
+}
