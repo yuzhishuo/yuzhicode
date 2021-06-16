@@ -1,4 +1,5 @@
 [workspace]
 members = [
-    "leetcode/rust/*"
+    "leetcode/rust/*/",
+    "leetcode/rust-go/*/"
 ]
