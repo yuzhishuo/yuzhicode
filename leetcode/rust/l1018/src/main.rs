@@ -4,8 +4,8 @@ impl Solution {
         a.iter()
             .enumerate()
             .scan(0, move |sum, x| {
-                *sum = ((*sum) *2 + x.1) % 5;
-                Some(*sum  == 0)
+                *sum = ((*sum) * 2 + x.1) % 5;
+                Some(*sum == 0)
             })
             .collect()
     }
