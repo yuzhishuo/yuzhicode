@@ -1,12 +1,12 @@
 use std::marker::PhantomData;
 
 #[derive(PartialEq)]
-struct PhantomTuple<A,B> (A, PhantomData<B>);
+struct PhantomTuple<A, B>(A, PhantomData<B>);
 
 #[derive(PartialEq)]
-struct PhantomStruct<A, B>{
+struct PhantomStruct<A, B> {
     first: A,
-    second: PhantomData<B>
+    second: PhantomData<B>,
 }
 fn main() {
     let _tuple1: PhantomTuple<char, f32> = PhantomTuple('Q', PhantomData);

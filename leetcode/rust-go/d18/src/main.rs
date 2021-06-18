@@ -1,4 +1,3 @@
-
 #[allow(dead_code)]
 fn foo(add: u8) -> impl Fn(u8) -> u8 {
     move |origin: u8| origin + add
@@ -12,8 +11,9 @@ trait Trait {
 impl Trait for i32 {
     type Output = i32;
     fn cc() -> i32
-        where Self::Output: std::fmt::Debug,
-        Self: Sized
+    where
+        Self::Output: std::fmt::Debug,
+        Self: Sized,
     {
         1
     }

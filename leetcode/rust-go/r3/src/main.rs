@@ -3,7 +3,7 @@ use std::fmt::Display;
 use std::ops::Deref;
 
 #[derive(Debug)]
-struct Vbox<T:  Display + Debug>(T);
+struct Vbox<T: Display + Debug>(T);
 
 impl<T: Display + Debug> Vbox<T> {
     fn new(val: T) -> Vbox<T> {

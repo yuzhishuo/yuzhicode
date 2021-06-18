@@ -1,5 +1,3 @@
 use std::iter::Iterator;
 
-fn main() {
-
-}
+fn main() {}

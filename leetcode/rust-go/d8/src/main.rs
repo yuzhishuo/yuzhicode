@@ -13,12 +13,12 @@ trait HasArea {
 
 #[derive(Debug)]
 struct Reactangle {
-    width : f32,
-    height: f32
+    width: f32,
+    height: f32,
 }
 
 impl HasArea for Reactangle {
-    fn area(&self) ->f64 {
+    fn area(&self) -> f64 {
         (self.width * self.height) as f64
     }
 }
@@ -28,5 +28,8 @@ fn print_debug<T: Debug>(t: &T) {
 }
 
 fn main() {
-    print_debug(&Reactangle{ width : 1.0f32, height :23.0f32 });
+    print_debug(&Reactangle {
+        width: 1.0f32,
+        height: 23.0f32,
+    });
 }

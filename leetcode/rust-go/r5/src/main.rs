@@ -1,6 +1,4 @@
-
 fn main() {
-
     let mut num = 1;
     let p1 = &num as *const i32;
     let p2 = &mut num as *mut i32;
