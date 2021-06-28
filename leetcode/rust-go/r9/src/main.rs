@@ -6,7 +6,6 @@ fn main() {
 
     #[allow(unused_variables)]
     let handle = thread::spawn(move || {
-
         let value = String::from("hi");
         tx.send(value).unwrap();
     });
