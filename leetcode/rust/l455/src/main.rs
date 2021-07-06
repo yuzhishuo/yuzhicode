@@ -23,7 +23,7 @@ impl Solution {
     }
 }
 impl Solution {
-    pub fn find_content_children(g: Vec<i32>, s: Vec<i32>) -> i32 {
+    pub fn find_content_children2(g: Vec<i32>, s: Vec<i32>) -> i32 {
         let (mut g, mut s) = (g, s);
         g.sort();
         s.sort();
@@ -38,4 +38,35 @@ impl Solution {
         child as i32
     }
 }
-fn main() {}
+
+impl Solution {
+    pub fn find_content_children3(mut g: Vec<i32>, mut s: Vec<i32>) -> i32 {
+        g.sort();
+        s.sort();
+        let (mut vg, mut vs) = (g.iter(), s.iter());
+        let (mut g, mut s) = (vg.next(), vs.next());
+        let mut ans = 0;
+        while g.is_some() && s.is_some() {
+            if g <= s {
+                ans += 1;
+                g = vg.next();
+            }
+            s = vs.next();
+        }
+        return ans;
+    }
+}
+fn main() {
+    assert_eq!(
+        Solution::find_content_children1(vec![1, 2, 3], vec![1, 1]),
+        1
+    );
+    assert_eq!(
+        Solution::find_content_children2(vec![1, 2, 3], vec![1, 1]),
+        1
+    );
+    assert_eq!(
+        Solution::find_content_children3(vec![1, 2, 3], vec![1, 1]),
+        1
+    );
+}
