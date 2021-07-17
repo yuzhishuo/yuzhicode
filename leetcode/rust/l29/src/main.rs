@@ -28,5 +28,5 @@ impl Solution {
 }
 
 fn main() {
-    assert_eq!(Solution::divide(10,3),3);
+    assert_eq!(Solution::divide(10, 3), 3);
 }
