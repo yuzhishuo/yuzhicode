@@ -36,6 +36,6 @@ impl Solution {
 }
 
 fn main() {
-    assert_eq!(Solution::single_number(vec![2, 2, 3, 2], 3));
-    assert_eq!(Solution::single_number1(vec![2, 2, 3, 2], 3));
+    assert_eq!(Solution::single_number(vec![2, 2, 3, 2]), 3);
+    assert_eq!(Solution::single_number1(vec![2, 2, 3, 2]), 3);
 }

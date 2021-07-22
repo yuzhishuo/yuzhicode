@@ -22,7 +22,7 @@ impl Solution {
     }
 }
 fn main() {
-    assert_eq(
+    assert_eq!(
         Solution::maximal_square(vec![
             vec!['1', '0', '1', '0', '0'],
             vec!['1', '0', '1', '1', '1'],

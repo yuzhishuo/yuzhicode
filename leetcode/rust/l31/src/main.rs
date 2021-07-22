@@ -43,5 +43,5 @@ impl Solution {
 }
 
 fn main() {
-    Solution::next_permutation(vec![1, 2, 3]);
+    Solution::next_permutation(&mut vec![1, 2, 3]);
 }
